@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsnew/features/home/presintaion/views/widgets/custom_icon.dart';
 import 'package:whatsnew/features/home/presintaion/views/widgets/custom_text_field.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -19,16 +20,18 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Expanded(
-          child: CustomTextField(),
+    return const SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: CustomTextField(),
+            ),
+            CustomIcon()
+          ],
         ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.notifications),
-        ),
-      ],
+      ),
     );
   }
 }

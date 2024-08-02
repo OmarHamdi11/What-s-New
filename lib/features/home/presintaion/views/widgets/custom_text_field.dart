@@ -6,18 +6,22 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        enabledBorder: buildOutlineInputBorder(),
-        focusedBorder: buildOutlineInputBorder(),
-        hintText: 'Search',
-        suffixIcon: IconButton(
-          onPressed: () {},
-          icon: const Opacity(
-            opacity: .8,
-            child: Icon(
-              FontAwesomeIcons.magnifyingGlass,
-              size: 24,
+    return SizedBox(
+      height: 40,
+      child: TextField(
+        decoration: InputDecoration(
+          enabledBorder: buildOutlineInputBorder(),
+          focusedBorder: buildOutlineInputBorder(),
+          hintText: 'Search',
+          hintStyle: const TextStyle(fontSize: 15),
+          suffixIcon: IconButton(
+            onPressed: () {},
+            icon: const Opacity(
+              opacity: .8,
+              child: Icon(
+                FontAwesomeIcons.magnifyingGlass,
+                size: 20,
+              ),
             ),
           ),
         ),
@@ -28,9 +32,10 @@ class CustomTextField extends StatelessWidget {
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
       borderSide: const BorderSide(
-        color: Colors.white,
+        width: .5,
+        color: Colors.grey,
       ),
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(32),
     );
   }
 }

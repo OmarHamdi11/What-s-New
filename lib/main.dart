@@ -15,8 +15,11 @@ class MyApp extends StatelessWidget {
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
-          useMaterial3: true),
+        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        iconTheme: const IconThemeData(
+          color: kPrimaryColor,
+        ),
+      ),
     );
   }
 }
